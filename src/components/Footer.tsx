@@ -2,7 +2,7 @@ import Logo from "../assets/images/logo-image.png";
 
 const Footer: React.FC = () => {
   return (
-    <>
+    <footer>
       <div className="bg-black pt-12 pb-16 px-32 flex gap-8 items-center">
         <img className="h-28" src={Logo} alt="Logo Image" />
         <div>
@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
           Komisi Pemilihan Umum DumbWays.ID | Jimmi Andreansa 2023
         </p>
       </div>
-    </>
+    </footer>
   );
 };
 

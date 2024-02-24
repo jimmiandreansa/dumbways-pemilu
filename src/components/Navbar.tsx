@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <div className="flex justify-between bg-black h-16 items-center px-32 z-10 fixed top-0 right-0 left-0">
+    <nav className="flex justify-between bg-black h-16 items-center px-32 z-10 fixed top-0 right-0 left-0">
       <div className="flex items-center">
         <div className="h-[41px] w-[41px]">
           <img className="items-center" src={Logo} alt="Logo Image" />
@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
           </div>
         )}
       </div>
-    </div>
+    </nav>
   );
 };
 
