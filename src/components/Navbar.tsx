@@ -1,11 +1,27 @@
 import { useState } from "react";
 import Logo from "../assets/images/logo-image.png";
+import { Link } from "react-router-dom";
+import ModalLogin from "../components/ModalLogin";
+import ModalRegister from "./ModalRegister";
 
 const Navbar: React.FC = () => {
-  const [isLogin, setIsLogin] = useState(false);
+  const [userLogin, setUserLogin] = useState<boolean>(false);
+  const [loginOpen, setLoginOpen] = useState<boolean>(false);
+  const [registerOpen, setRegisterOpen] = useState<boolean>(false);
+
+  const loginAsUser = (): void => {
+    setUserLogin(!userLogin);
+    setLoginOpen(false);
+  };
+
+  const handleRegister = (): void => {
+    setLoginOpen(false);
+    setRegisterOpen(true);
+  };
 
   const handleLogin = (): void => {
-    setIsLogin(!isLogin);
+    setRegisterOpen(false);
+    setLoginOpen(true);
   };
 
   return (
@@ -15,30 +31,30 @@ const Navbar: React.FC = () => {
           <img className="items-center" src={Logo} alt="Logo Image" />
         </div>
         <div>
-          <h2 className="text-white font-bold ml-4 text-2xl">
+          <Link to="/" className="text-white font-bold ml-4 text-2xl">
             PEMILU PRESIDEN DUMBWAYS.ID
-          </h2>
+          </Link>
         </div>
       </div>
       <div className="flex">
         <div className="flex text-white text-xl items-center">
-          <a className="m-5" href="/">
+          <Link className="m-5" to="/list-partai">
             Partai
-          </a>
+          </Link>
           <p>|</p>
-          <a className="m-5" href="/">
+          <Link className="m-5" to="/list-paslon">
             Paslon
-          </a>
+          </Link>
           <p>|</p>
-          <a className="m-5" href="/">
+          <Link className="m-5" to="/vote">
             Voting
-          </a>
+          </Link>
         </div>
-        {isLogin === false ? (
+        {userLogin === false ? (
           <div className="flex items-center">
             <button
               className="bg-white text-xl font-bold px-7 py-1 rounded-md ml-5"
-              onClick={handleLogin}
+              onClick={() => setLoginOpen(true)}
             >
               LOGIN
             </button>
@@ -51,6 +67,110 @@ const Navbar: React.FC = () => {
           </div>
         )}
       </div>
+      <ModalLogin loginOpen={loginOpen} onClose={() => setLoginOpen(false)}>
+        <div>
+          <h1 className="text-center font-black text-ijo-lumut text-4xl mb-4">
+            LOGIN
+          </h1>
+          <form className="w-full" action="">
+            <label className="block text-lg font-bold leading-6 text-gray-600">
+              Username
+            </label>
+            <input
+              type="text"
+              autoComplete="off"
+              className="mt-2 border border-gray-500 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            />
+            <label className="mt-4 block text-lg font-bold leading-6 text-gray-600">
+              Password
+            </label>
+            <input
+              type="password"
+              autoComplete="off"
+              className="mt-2 border border-gray-500 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            />
+            <button
+              className="flex mr-auto bg-tombol-suaramu px-32 py-2 mt-8 rounded-lg text-white text-center font-semibold text-xl"
+              onClick={loginAsUser}
+            >
+              SUBMIT
+            </button>
+            <div className="flex italic gap-1 justify-center mt-4">
+              <p className="">Belum memiliki akun ?</p>
+              <p
+                className="text-blue-500 underline cursor-pointer"
+                onClick={handleRegister}
+              >
+                Register
+              </p>
+            </div>
+          </form>
+        </div>
+      </ModalLogin>
+      <ModalRegister
+        registerOpen={registerOpen}
+        onClose={() => setRegisterOpen(false)}
+      >
+        <div>
+          <h1 className="text-center font-black text-ijo-lumut text-4xl mb-4">
+            REGISTER
+          </h1>
+          <form className="w-full" action="">
+            <label className="block text-lg font-bold leading-6 text-gray-600">
+              Fullname
+            </label>
+            <input
+              type="text"
+              autoComplete="off"
+              className="mt-1 border border-gray-500 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            />
+            <label className="mt-2 block text-lg font-bold leading-6 text-gray-600">
+              Alamat
+            </label>
+            <input
+              type="text"
+              autoComplete="off"
+              className="mt-1 border border-gray-500 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            />
+            <label className="mt-2 block text-lg font-bold leading-6 text-gray-600">
+              Jenis Kelamin
+            </label>
+            <input
+              type="text"
+              autoComplete="off"
+              className="mt-1 border border-gray-500 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            />
+            <label className="mt-2 block text-lg font-bold leading-6 text-gray-600">
+              Username
+            </label>
+            <input
+              type="text"
+              autoComplete="off"
+              className="mt-1 border border-gray-500 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            />
+            <label className="mt-2 block text-lg font-bold leading-6 text-gray-600">
+              Password
+            </label>
+            <input
+              type="password"
+              autoComplete="off"
+              className="mt-1 border border-gray-500 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            />
+            <button className="flex mr-auto bg-tombol-suaramu px-32 py-2 mt-6 rounded-lg text-white text-center font-semibold text-xl">
+              SUBMIT
+            </button>
+            <div className="flex italic gap-1 justify-center mt-4">
+              <p className="">Telah memiliki akun ?</p>
+              <p
+                className="text-blue-500 underline cursor-pointer"
+                onClick={handleLogin}
+              >
+                Login
+              </p>
+            </div>
+          </form>
+        </div>
+      </ModalRegister>
     </nav>
   );
 };

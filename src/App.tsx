@@ -3,7 +3,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
 import VotePage from "./pages/VotePage";
-import DetailPage from "./pages/DetailPage";
+import DetailPage from "./pages/NewsDetailPage";
 import AdminPage from "./pages/AdminPage";
 import ListPaslonPage from "./pages/ListPaslonPage";
 import AddPaslonPage from "./pages/AddPaslonPage";
@@ -18,7 +18,7 @@ function App() {
       <Routes>
         <Route path="/" Component={HomePage} />
         <Route path="/vote" Component={VotePage} />
-        <Route path="/detail" Component={DetailPage} />
+        <Route path="/news-detail" Component={DetailPage} />
         <Route path="/admin" Component={AdminPage} />
         <Route path="/list-paslon" Component={ListPaslonPage} />
         <Route path="/add-paslon" Component={AddPaslonPage} />

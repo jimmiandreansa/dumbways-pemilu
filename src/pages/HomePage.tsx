@@ -3,7 +3,7 @@ import "../index.css";
 import Background from "../assets/images/rectangle.png";
 import Branding from "../assets/images/brandred.png";
 import KotakSuara from "../assets/images/kotak-suara.png";
-import InfoCard from '../components/InfoCard';
+import InfoCard from '../components/NewsCard';
 
 const HomePage : React.FC = () => {
   return (
