@@ -6,10 +6,12 @@ import ModalRegister from "./ModalRegister";
 
 const Navbar: React.FC = () => {
   const [userLogin, setUserLogin] = useState<boolean>(false);
+
   const [loginOpen, setLoginOpen] = useState<boolean>(false);
   const [registerOpen, setRegisterOpen] = useState<boolean>(false);
 
-  const loginAsUser = (): void => {
+  const loginAsUser = (e: React.MouseEvent<HTMLElement>): void => {
+    e.preventDefault();
     setUserLogin(!userLogin);
     setLoginOpen(false);
   };

@@ -28,17 +28,17 @@ const Carousel: React.FC = () => {
                 <div className="mt-5 text-[21px] leading-7">
                   <p>Visi & Misi :</p>
                   <ul className="list-disc ml-8">
-                    <li>{data.visiMisi[0]}</li>
-                    <li>{data.visiMisi[1]}</li>
-                    <li>{data.visiMisi[2]}</li>
+                    {data.visiMisi.map((item, index) => (
+                      <li key={index}>{item}</li>
+                    ))}
                   </ul>
                 </div>
                 <div className="mt-5 text-[21px] leading-7">
                   <p>Koalisi :</p>
                   <ul className="list-disc ml-8">
-                    <li>{data.koalisi[0]}</li>
-                    <li>{data.koalisi[1]}</li>
-                    <li>{data.koalisi[2]}</li>
+                    {data.koalisi.map((item, index) => (
+                      <li key={index}>{item}</li>
+                    ))}
                   </ul>
                 </div>
               </div>
