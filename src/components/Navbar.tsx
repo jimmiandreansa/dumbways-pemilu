@@ -40,22 +40,31 @@ const Navbar: React.FC = () => {
       </div>
       <div className="flex">
         <div className="flex text-white text-xl items-center">
-          <Link className="m-5" to="/list-partai">
+          <Link
+            className="m-5 hover:text-paslon-kuning transition-all"
+            to="/list-partai"
+          >
             Partai
           </Link>
           <p>|</p>
-          <Link className="m-5" to="/list-paslon">
+          <Link
+            className="m-5 hover:text-paslon-kuning transition-all"
+            to="/list-paslon"
+          >
             Paslon
           </Link>
           <p>|</p>
-          <Link className="m-5" to="/vote">
+          <Link
+            className="m-5 hover:text-paslon-kuning transition-all"
+            to="/vote"
+          >
             Voting
           </Link>
         </div>
         {userLogin === false ? (
           <div className="flex items-center">
             <button
-              className="bg-white text-xl font-bold px-7 py-1 rounded-md ml-5"
+              className="bg-white text-xl font-bold px-7 py-1 rounded-md ml-5 hover:bg-gray-200 transition-all"
               onClick={() => setLoginOpen(true)}
             >
               LOGIN
@@ -92,12 +101,12 @@ const Navbar: React.FC = () => {
               className="mt-2 border border-gray-500 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
             />
             <button
-              className="flex mr-auto bg-tombol-suaramu px-32 py-2 mt-8 rounded-lg text-white text-center font-semibold text-xl"
+              className="flex mr-auto bg-tombol-suaramu px-32 py-2 mt-8 rounded-lg text-white text-center font-semibold text-xl hover:bg-[#4f4808] hover:shadow-md transition-all"
               onClick={loginAsUser}
             >
               SUBMIT
             </button>
-            <div className="flex italic gap-1 justify-center mt-4">
+            <div className="flex italic gap-1 justify-center mt-2">
               <p className="">Belum memiliki akun ?</p>
               <p
                 className="text-blue-500 underline cursor-pointer"
@@ -158,10 +167,10 @@ const Navbar: React.FC = () => {
               autoComplete="off"
               className="mt-1 border border-gray-500 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
             />
-            <button className="flex mr-auto bg-tombol-suaramu px-32 py-2 mt-6 rounded-lg text-white text-center font-semibold text-xl">
+            <button className="flex mr-auto bg-tombol-suaramu px-32 py-2 mt-6 rounded-lg text-white text-center font-semibold text-xl hover:bg-[#4f4808] hover:shadow-md transition-all">
               SUBMIT
             </button>
-            <div className="flex italic gap-1 justify-center mt-4">
+            <div className="flex italic gap-1 justify-center mt-2">
               <p className="">Telah memiliki akun ?</p>
               <p
                 className="text-blue-500 underline cursor-pointer"

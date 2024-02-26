@@ -3,7 +3,7 @@ import "../index.css";
 import Background from "../assets/images/rectangle.png";
 import Branding from "../assets/images/brandred.png";
 import KotakSuara from "../assets/images/kotak-suara.png";
-import InfoCard from '../components/NewsCard';
+import NewsCard from '../components/NewsCard';
 
 const HomePage : React.FC = () => {
   return (
@@ -26,7 +26,7 @@ const HomePage : React.FC = () => {
             </p>
           </div>
         </div>
-        <InfoCard />
+        <NewsCard />
       </div>
 
       {/* Bottom Content */}

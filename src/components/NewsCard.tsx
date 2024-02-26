@@ -2,17 +2,17 @@ import React from "react";
 import { infoCards, HeadlineCard } from "../data";
 import { Link } from "react-router-dom";
 
-interface InfoCard {
+interface NewsCard {
   img: string;
   date: string;
   title: string;
   author: string;
 }
 
-const InfoCard: React.FC = () => {
+const NewsCard: React.FC = () => {
   return (
     <div className="grid grid-cols-3 gap-4 py-24 px-32">
-      {HeadlineCard.map((item: InfoCard, index: number) => (
+      {HeadlineCard.map((item: NewsCard, index: number) => (
         <Link
           to="/news-detail"
           key={index}
@@ -34,7 +34,7 @@ const InfoCard: React.FC = () => {
           </div>
         </Link>
       ))}
-      {infoCards.map((item: InfoCard, index: number) => {
+      {infoCards.map((item: NewsCard, index: number) => {
         return (
           <Link
             to="/news-detail"
@@ -58,4 +58,4 @@ const InfoCard: React.FC = () => {
   );
 };
 
-export default InfoCard;
+export default NewsCard;

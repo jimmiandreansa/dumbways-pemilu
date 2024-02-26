@@ -44,12 +44,12 @@ const VotePage: React.FC = () => {
                   <p className="font-medium">
                     No. <br /> Paslon
                   </p>
-                  <p className="font-bold text-[32px]">{data.nomorUrut}</p>
+                  <p className="font-bold text-[30px]">{data.nomorUrut}</p>
                 </div>
                 <div
-                  className={`flex flex-col ml-7 text-${data.bgColorSecondary} justify-center`}
+                  className={`flex flex-col ml-5 text-${data.bgColorSecondary} justify-center`}
                 >
-                  <p className="font-black text-[38px] text-outline uppercase">
+                  <p className="font-black text-[36px] text-outline uppercase">
                     {data.name}
                   </p>
                   <p className="text-4xl font-bold text-outline-2">
@@ -60,7 +60,7 @@ const VotePage: React.FC = () => {
             ))}
             {pilih === false ? (
               <button
-                className="flex ml-2 mr-auto bg-tombol-suaramu px-14 py-3 mt-14 rounded-lg text-white text-center font-semibold text-3xl"
+                className="flex ml-2 mr-auto bg-tombol-suaramu px-14 py-3 mt-14 rounded-lg text-white text-center font-semibold text-3xl hover:bg-[#4f4808] hover:shadow-md transition-all"
                 onClick={() => setOpen(true)}
               >
                 MASUKKAN SUARAMU
@@ -81,12 +81,8 @@ const VotePage: React.FC = () => {
                       key={index}
                       className="flex flex-col items-center gap-6 shadow-lg rounded-2xl"
                     >
-                      <div
-                        className={`${data.bgColorPrimary} px-4 pt-6 rounded-2xl relative w-full h-full`}
-                      >
-                        <div
-                          className={`absolute right-0 top-0 border-white w-20 h-20 ${data.bgColorSecondary} text-3xl font-bold text-white rounded-full border-[3px] flex justify-center items-center`}
-                        >
+                      <div className="bg-[#E3E3E3] px-4 pt-6 rounded-2xl relative w-full h-full cursor-pointer hover:shadow-lg hover:bg-[#FCFF63]">
+                        <div className="absolute right-0 top-0 border-white w-20 h-20 bg-[#A9A9A9] text-3xl font-bold text-white rounded-full border-[3px] flex justify-center items-center hover:bg-[#FF6384]">
                           {data.noUrut}
                         </div>
                         <img
@@ -100,20 +96,20 @@ const VotePage: React.FC = () => {
                         <p className="text-lg">{data.motto}</p>
                         <p className="text-lg font-bold">Partai Pengusung :</p>
                         <ul className="list-disc ml-8 leading-5">
-                          <li>{data.partaiPengusung[0]}</li>
-                          <li>{data.partaiPengusung[1]}</li>
-                          <li>{data.partaiPengusung[2]}</li>
+                          {data.partaiPengusung.map((item, index) => (
+                            <li key={index}>{item}</li>
+                          ))}
                         </ul>
                       </div>
                     </div>
                   ))}
                 </div>
                 <div className="flex mt-4 gap-8 mx-4">
-                  <button className="flex justify-center items-center bg-transparent py-2 rounded-xl text-tombol-suaramu text-center font-bold text-2xl w-full border-tombol-suaramu border-4">
+                  <button className="flex justify-center items-center bg-transparent py-2 rounded-xl text-tombol-suaramu text-center font-bold text-2xl w-full border-tombol-suaramu border-4 hover:bg-gray-200 transition-all">
                     RESET
                   </button>
                   <button
-                    className="flex justify-center items-center bg-tombol-suaramu py-2 rounded-xl text-white text-center font-semibold text-2xl w-full"
+                    className="flex justify-center items-center bg-tombol-suaramu py-2 rounded-xl text-white text-center font-semibold text-2xl w-full hover:bg-[#4f4808] hover:shadow-md transition-all"
                     onClick={pilihSekarang}
                   >
                     SUBMIT
