@@ -1,0 +1,29 @@
+[
+  {
+    "nomorUrut": 3,
+    "name": "Kupukupu, S.Ag",
+    "percent": 51,
+    "bgColorPrimary": "bgPaslonPink",
+    "bgColorSecondary": "bgPaslonDarkPink",
+    "colorSecondary": "paslon-pink-tua",
+    "boxShadow": "boxShadowPink"
+  },
+  {
+    "nomorUrut": 1,
+    "name": "Brandon Eich, M.Kom",
+    "percent": 35,
+    "bgColorPrimary": "bgPaslonYellow",
+    "bgColorSecondary": "bgPaslonDarkYellow",
+    "colorSecondary": "paslon-kuning-tua",
+    "boxShadow": "boxShadowYellow"
+  },
+  {
+    "nomorUrut": 2,
+    "name": "Anna Betadine, S.H.",
+    "percent": 14,
+    "bgColorPrimary": "bgPaslonBlue",
+    "bgColorSecondary": "bgPaslonDarkBlue",
+    "colorSecondary": "paslon-biru-tua",
+    "boxShadow": "boxShadowBlue"
+  }
+]

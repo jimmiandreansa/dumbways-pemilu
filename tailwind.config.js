@@ -19,5 +19,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("rippleui"), require('flowbite/plugin')],
 };

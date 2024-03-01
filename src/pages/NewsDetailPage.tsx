@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
-import { NewsDetail } from "../data";
+import { InterfaceArticleDetail } from "../Interfaces/interfaceArticleDetail";
+import DataArticleDetail from "../Mocks/dataArticleDetail.json";
 
 const DetailPage: React.FC = () => {
   return (
     <div className="content px-32">
-      {NewsDetail.map((data, index) => (
+      {DataArticleDetail.map((data: InterfaceArticleDetail, index: number) => (
         <div key={index} className="bg-white px-10 py-24 relative">
           <Link to="/" className="flex items-center gap-3 absolute top-24">
             <FaArrowLeft className="w-4 h-4" />
@@ -18,19 +19,19 @@ const DetailPage: React.FC = () => {
           </h1>
           <p className="text-center text-xl font-medium">{data.author}</p>
           <p className="text-center text-xl font-medium">{data.date}</p>
-          <img className="mt-10" src={data.img} alt="News Image" />
-          <p className="mt-14 font-medium text-lg text-justify">
-            {data.content1}
-          </p>
-          <p className="mt-8 font-medium text-lg text-justify">
-            {data.content2}
-          </p>
-          <p className="mt-8 font-medium text-lg text-justify">
-            {data.content3}
-          </p>
-          <p className="mt-8 font-medium text-lg text-justify">
-            {data.content4}
-          </p>
+          <img className="mt-10 w-full" src={data.image} alt="News Image" />
+          <div className="mt-10">
+            {data.paragraph.map((item, index) => {
+              return (
+                <p
+                  key={index}
+                  className="mt-4 font-medium text-lg text-justify"
+                >
+                  {item}
+                </p>
+              );
+            })}
+          </div>
         </div>
       ))}
     </div>

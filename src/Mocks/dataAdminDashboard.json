@@ -1,0 +1,35 @@
+[
+  {
+    "noUrut": 1,
+    "name": "Brandon Eich, M.Kom",
+    "image": "https://img.freepik.com/free-photo/waist-up-portrait-handsome-serious-unshaven-male-keeps-hands-together-dressed-dark-blue-shirt-has-talk-with-interlocutor-stands-against-white-wall-self-confident-man-freelancer_273609-16320.jpg?t=st=1709039014~exp=1709042614~hmac=c92d30a2f1d4e36aee0a5d62fa03dfcbfba7cda5ac9989336946397a9a2d70a3&w=740",
+    "accumulate": 45,
+    "voters": 117,
+    "bgColorPrimary": "bgPaslonYellow",
+    "boxShadow": "boxShadowYellow",
+    "borderColor": "border-paslon-kuning-tua",
+    "textColor": "text-paslon-kuning-tua"
+  },
+  {
+    "noUrut": 2,
+    "name": "Anna Betadine, S.H.",
+    "image": "https://img.freepik.com/free-photo/indoor-shot-attractive-young-woman-with-glasses-posing-against-white-wall_273609-20347.jpg?t=st=1709039190~exp=1709042790~hmac=0bc513ae817db53fa76ccc74923850944e169e453e0cb24b15aba423f15ea10a&w=740",
+    "accumulate": 75,
+    "voters": 300,
+    "bgColorPrimary": "bgPaslonBlue",
+    "boxShadow": "boxShadowBlue",
+    "borderColor": "border-paslon-biru-tua",
+    "textColor": "text-paslon-biru-tua"
+  },
+  {
+    "noUrut": 3,
+    "name": "Kupukupu, S.Ag",
+    "image": "https://img.freepik.com/free-photo/handsome-bearded-guy-posing-against-white-wall_273609-20597.jpg?t=st=1709039221~exp=1709042821~hmac=2e8c484f83e2ed70ba31c8663fdff053ba721224b497d02b375aa7cf248afb5e&w=740",
+    "accumulate": 45,
+    "voters": 117,
+    "bgColorPrimary": "bgPaslonPink",
+    "boxShadow": "boxShadowPink",
+    "borderColor": "border-paslon-pink-tua",
+    "textColor": "text-paslon-pink-tua"
+  }
+]

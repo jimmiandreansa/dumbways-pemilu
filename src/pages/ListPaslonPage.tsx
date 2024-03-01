@@ -1,6 +1,5 @@
 import React from "react";
 import Foto from "../assets/images/foto-paslon.png";
-import ModalVote from "../components/ModalVote"
 
 const ListPaslonPage: React.FC = () => {
   return (
@@ -61,7 +60,6 @@ const ListPaslonPage: React.FC = () => {
           </tbody>
         </table>
       </div>
-      <ModalVote />
     </div>
 
   );

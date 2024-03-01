@@ -1,0 +1,41 @@
+[
+  {
+    "noUrut": 1,
+    "name": "Brandon Eich, M.Kom",
+    "img": "https://img.freepik.com/free-photo/waist-up-portrait-handsome-serious-unshaven-male-keeps-hands-together-dressed-dark-blue-shirt-has-talk-with-interlocutor-stands-against-white-wall-self-confident-man-freelancer_273609-16320.jpg?t=st=1709039014~exp=1709042614~hmac=c92d30a2f1d4e36aee0a5d62fa03dfcbfba7cda5ac9989336946397a9a2d70a3&w=740",
+    "motto": "Anaknya kang seblak sebelah",
+    "partaiPengusung": [
+      "Partai Kerupuk Mentah",
+      "Partai Cabe Merah Indonesia",
+      "Partai Bang Beli Bang"
+    ],
+    "bgColorPrimary": "bg-[#FCFF63]",
+    "bgColorSecondary": "bg-[#FF6384]"
+  },
+  {
+    "noUrut": 2,
+    "name": "Anna Betadine, S.H.",
+    "img": "https://img.freepik.com/free-photo/indoor-shot-attractive-young-woman-with-glasses-posing-against-white-wall_273609-20347.jpg?t=st=1709039190~exp=1709042790~hmac=0bc513ae817db53fa76ccc74923850944e169e453e0cb24b15aba423f15ea10a&w=740",
+    "motto": "Mba-mba penjual gorengan",
+    "partaiPengusung": [
+      "Partai Minyak Goreng",
+      "Partai Tahu dan Tempe",
+      "Partai Bala Bala"
+    ],
+    "bgColorPrimary": "bg-[#E3E3E3]",
+    "bgColorSecondary": "bg-[#A9A9A9]"
+  },
+  {
+    "noUrut": 3,
+    "name": "Kupukupu, S.Ag",
+    "img": "https://img.freepik.com/free-photo/handsome-bearded-guy-posing-against-white-wall_273609-20597.jpg?t=st=1709039221~exp=1709042821~hmac=2e8c484f83e2ed70ba31c8663fdff053ba721224b497d02b375aa7cf248afb5e&w=740",
+    "motto": "Abang satpam komplek sebelah",
+    "partaiPengusung": [
+      "Partai Persatuan Satpam",
+      "Partai Merah Merona Bagai Kuda",
+      "Partai Pos Ronda"
+    ],
+    "bgColorPrimary": "bg-[#E3E3E3]",
+    "bgColorSecondary": "bg-[#A9A9A9]"
+  }
+]

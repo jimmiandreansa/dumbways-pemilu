@@ -1,6 +1,8 @@
 import React from "react";
-import { DataAdminDashboard } from "../data";
-import { DataVoters } from "../data";
+import { InterfaceDataAdmin } from "../Interfaces/interfaceDataAdmin.ts";
+import { InterfaceDataVoter } from "../Interfaces/interfaceDataVoter.ts";
+import DataAdminDashboard from "../Mocks/dataAdminDashboard.json";
+import DataVoters from "../Mocks/dataVoters.json"
 
 const AdminPage: React.FC = () => {
   return (
@@ -10,7 +12,7 @@ const AdminPage: React.FC = () => {
           DASHBOARD
         </h1>
         <div className="flex gap-4">
-          {DataAdminDashboard.map((data, index) => (
+          {DataAdminDashboard.map((data: InterfaceDataAdmin, index: number) => (
             <div key={index} className="flex flex-col items-center gap-6">
               <div
                 className={`w-16 h-16 ${data.bgColorPrimary} text-3xl font-black ${data.textColor} rounded-full border-[7px] ${data.borderColor} flex justify-center items-center`}
@@ -18,11 +20,15 @@ const AdminPage: React.FC = () => {
                 {data.noUrut}
               </div>
               <div
-                className={`${data.bgColorPrimary} px-4 py-6 rounded-2xl ${data.boxShadow}`}
+                className={`${data.bgColorPrimary} p-4 rounded-2xl ${data.boxShadow}`}
               >
-                <img src={data.img} alt="Foto Paslon" />
+                <img
+                  className="rounded-lg"
+                  src={data.image}
+                  alt={data.name}
+                />
                 <h1
-                  className={`font-black text-[38px] text-outline uppercase ${data.textColor}`}
+                  className={`font-black text-2xl text-outline-2 uppercase mt-4 ${data.textColor}`}
                 >
                   {data.name}
                 </h1>
@@ -66,14 +72,14 @@ const AdminPage: React.FC = () => {
                 </th>
               </tr>
             </thead>
-            {DataVoters.map((data, index) => (
+            {DataVoters.map((data: InterfaceDataVoter, index: number) => (
               <tbody key={index}>
                 <tr className="bg-[#f0f0f0] border-b border-[#c6c6c6]">
                   <th
                     scope="row"
                     className="px-6 py-4 font-medium text-black whitespace-nowrap bg-[#E5E5E5]"
                   >
-                    {data.number}
+                    {index + 1}
                   </th>
                   <td className="px-6 py-4 text-black">{data.name}</td>
                   <td className="px-6 py-4 text-black bg-[#E5E5E5]">
@@ -89,7 +95,7 @@ const AdminPage: React.FC = () => {
           </table>
         </div>
         <h1 className="text-3xl font-bold my-12">
-          TOTAL SUARA TERKUMPUL : 100 Voters
+          TOTAL SUARA TERKUMPUL : {DataVoters.length} Voters
         </h1>
       </div>
     </>

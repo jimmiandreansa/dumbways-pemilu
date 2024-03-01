@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Muhammad Shapta",
+    "address": "Yogyakarta",
+    "gender": "Laki Laki",
+    "paslon": "Brandon Eich, M.Kom"
+  },
+  {
+    "name": "Hardi Wiryadinata",
+    "address": "Jakarta",
+    "gender": "Laki Laki",
+    "paslon": "Kupukupu, S.Ag"
+  },
+  {
+    "name": "Arief Rivansyah",
+    "address": "Pekanbaru",
+    "gender": "Laki Laki",
+    "paslon": "Brandon Eich, M.Kom"
+  },
+  {
+    "name": "Rafly Rudistira",
+    "address": "Yogyakarta",
+    "gender": "Laki Laki",
+    "paslon": "Anna Betadine, S.H."
+  },
+  {
+    "name": "Atika Oktaviani",
+    "address": "Pekanbaru",
+    "gender": "Perempuan",
+    "paslon": "Kupukupu, S.Ag"
+  },
+  {
+    "name": "Putri Dwi",
+    "address": "Pekanbaru",
+    "gender": "Perempuan",
+    "paslon": "Kupukupu, S.Ag"
+  }
+]
