@@ -13,5 +13,35 @@
       "Partai Redbull.",
       "Partai Black Magic."
     ]
+  },
+  {
+    "image": "https://img.freepik.com/free-photo/indoor-shot-attractive-young-woman-with-glasses-posing-against-white-wall_273609-20347.jpg?t=st=1709039190~exp=1709042790~hmac=0bc513ae817db53fa76ccc74923850944e169e453e0cb24b15aba423f15ea10a&w=740",
+    "noUrut": 2,
+    "name": "Anna Betadine, S.H.",
+    "visiMisi": [
+      "Memindahkan Indonesia ke Isekai.",
+      "Nonton anime 3x sehari.",
+      "Melakukan peresapan pada budaya jepang."
+    ],
+    "koalisi": [
+      "Partai Persatuan Wiboo.",
+      "Partai Redbull.",
+      "Partai Black Magic."
+    ]
+  },
+  {
+    "image": "https://img.freepik.com/free-photo/handsome-bearded-guy-posing-against-white-wall_273609-20597.jpg?t=st=1709039221~exp=1709042821~hmac=2e8c484f83e2ed70ba31c8663fdff053ba721224b497d02b375aa7cf248afb5e&w=740",
+    "noUrut": 3,
+    "name": "Kupukupu, S.Ag",
+    "visiMisi": [
+      "Memindahkan Indonesia ke Isekai.",
+      "Nonton anime 3x sehari.",
+      "Melakukan peresapan pada budaya jepang."
+    ],
+    "koalisi": [
+      "Partai Persatuan Wiboo.",
+      "Partai Redbull.",
+      "Partai Black Magic."
+    ]
   }
 ]

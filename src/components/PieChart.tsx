@@ -7,7 +7,7 @@ const PieChart = () => {
         type="pie"
         width={380}
         height={380}
-        series={[23, 43, 50]}
+        series={[51, 35, 14]}
         options={{
           noData: { text: "Empty Data" },
           colors: ["#FF6384", "#FFCD56", "#36A2EB"],

@@ -1,29 +1,53 @@
-import React from "react";
-import {
-  IoIosArrowDropleftCircle,
-  IoIosArrowDroprightCircle,
-} from "react-icons/io";
-import { InterfaceCarousel } from "../Interfaces/interfaceCarousel";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 import DataCarousel from "../Mocks/dataCarousel.json";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
+import "../index.css";
 
-const Carousel: React.FC = () => {
+function NextArrow(props) {
+  const { className, onClick } = props;
   return (
-    <div className="content px-32 py-20">
-      <p className="text-ijo-lumut font-black text-5xl text-center">
+    <div className={className} onClick={onClick}>
+      <FaAngleRight style={{ color: "#cecece", fontSize: "48px", }} />
+    </div>
+  );
+}
+
+function PrevArrow(props) {
+  const { className, onClick } = props;
+  return (
+    <div className={className} onClick={onClick}>
+      <FaAngleLeft style={{ color: "#cecece", fontSize: "48px"  }} />
+    </div>
+  );
+}
+
+const Carousel = () => {
+  const settings = {
+    autoplay: true,
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+  };
+
+  return (
+    <div className="content px-48 py-20">
+      <h1 className="text-center font-black text-ijo-lumut text-5xl mb-12">
         INFO PASLON
-      </p>
-      <div className="flex mt-16 gap-10 items-center justify-center">
-        <IoIosArrowDropleftCircle className="w-10 h-10 text-white cursor-pointer" />
-        {DataCarousel.map((data: InterfaceCarousel, index: number) => (
-          <div
-            key={index}
-            className="bg-white p-12 rounded-xl w-4/5 shadow-lg shadow-slate-400"
-          >
-            <div className="flex gap-8">
+      </h1>
+      <Slider {...settings}>
+        {DataCarousel.map((data, index) => (
+          <div key={index} className="bg-white rounded-xl p-12">
+            <div className="flex flex-row gap-12 w-fit">
               <img
-                className="w-56 h-72 object-cover"
+                className="h-88 w-64 object-cover rounded-lg"
                 src={data.image}
-                alt={data.name}
+                alt=""
               />
               <div>
                 <p className="text-2xl font-bold text-black">
@@ -52,8 +76,7 @@ const Carousel: React.FC = () => {
             </div>
           </div>
         ))}
-        <IoIosArrowDroprightCircle className="w-10 h-10 text-white cursor-pointer" />
-      </div>
+      </Slider>
     </div>
   );
 };

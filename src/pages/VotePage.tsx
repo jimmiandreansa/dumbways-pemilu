@@ -5,7 +5,6 @@ import { InterfaceDataPaslon } from "../Interfaces/interfaceDataPaslon.ts";
 import { InterfaceDataChooseVoter } from "../Interfaces/interfaceDataChooseVoter.ts";
 import DataPaslon from "../Mocks/dataPaslon.json";
 import DataVoter from "../Mocks/dataChooseVoter.json";
-import StatImage from "../assets/images/stats.png";
 import "../index.css";
 import PieChart from "../components/PieChart.tsx";
 
