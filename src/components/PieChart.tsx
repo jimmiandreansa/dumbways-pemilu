@@ -11,6 +11,11 @@ const PieChart = () => {
         options={{
           noData: { text: "Empty Data" },
           colors: ["#FF6384", "#FFCD56", "#36A2EB"],
+          labels: [
+            "BRANDON EICH, M.KOM",
+            "ANNA BETADINE, S.H.",
+            "KUPUKUPU, S.AG",
+          ],
           legend: {
             show: false,
           },

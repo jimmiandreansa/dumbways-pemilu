@@ -11,7 +11,7 @@ const NewsCard: React.FC = () => {
           <Link
             to="/news-detail"
             key={index}
-            className="col-span-2 relative border-4 border-white hover:border-slate-200 hover:shadow-lg"
+            className="col-span-2 relative hover:shadow-lg"
           >
             <img
               className="w-full h-96 object-cover"
@@ -40,7 +40,7 @@ const NewsCard: React.FC = () => {
           <Link
             to="/news-detail"
             key={index}
-            className="bg-white w-full h-96 border-4 border-white hover:border-slate-200 hover:shadow-lg relative"
+            className="bg-white w-full h-96 border-4 border-white box-border hover:border-slate-200 hover:shadow-lg relative"
           >
             <img
               className="h-1/2 w-full object-cover"

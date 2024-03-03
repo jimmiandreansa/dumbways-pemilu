@@ -5,20 +5,25 @@ import DataCarousel from "../Mocks/dataCarousel.json";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import "../index.css";
 
-function NextArrow(props) {
+type propTypes = {
+  className: string;
+  onClick: () => void;
+}
+
+function NextArrow(props: propTypes) {
   const { className, onClick } = props;
   return (
     <div className={className} onClick={onClick}>
-      <FaAngleRight style={{ color: "#cecece", fontSize: "48px", }} />
+      <FaAngleRight style={{ color: "white", fontSize: "40px" }} />
     </div>
   );
 }
 
-function PrevArrow(props) {
+function PrevArrow(props: propTypes) {
   const { className, onClick } = props;
   return (
     <div className={className} onClick={onClick}>
-      <FaAngleLeft style={{ color: "#cecece", fontSize: "48px"  }} />
+      <FaAngleLeft style={{ color: "white", fontSize: "40px" }} />
     </div>
   );
 }
@@ -31,8 +36,12 @@ const Carousel = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow className={""} onClick={function (): void {
+      throw new Error("Function not implemented.");
+    } } />,
+    prevArrow: <PrevArrow className={""} onClick={function (): void {
+      throw new Error("Function not implemented.");
+    } } />,
   };
 
   return (

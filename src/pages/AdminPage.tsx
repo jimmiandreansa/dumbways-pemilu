@@ -2,7 +2,7 @@ import React from "react";
 import { InterfaceDataAdmin } from "../Interfaces/interfaceDataAdmin.ts";
 import { InterfaceDataVoter } from "../Interfaces/interfaceDataVoter.ts";
 import DataAdminDashboard from "../Mocks/dataAdminDashboard.json";
-import DataVoters from "../Mocks/dataVoters.json"
+import DataVoters from "../Mocks/dataVoters.json";
 
 const AdminPage: React.FC = () => {
   return (
@@ -15,18 +15,14 @@ const AdminPage: React.FC = () => {
           {DataAdminDashboard.map((data: InterfaceDataAdmin, index: number) => (
             <div key={index} className="flex flex-col items-center gap-6">
               <div
-                className={`w-16 h-16 ${data.bgColorPrimary} text-3xl font-black ${data.textColor} rounded-full border-[7px] ${data.borderColor} flex justify-center items-center`}
+                className={`w-16 h-16 ${data.bgColorPrimary} text-3xl ${data.borderColor} font-black ${data.textColor} rounded-full border-[7px] flex justify-center items-center`}
               >
                 {data.noUrut}
               </div>
               <div
                 className={`${data.bgColorPrimary} p-4 rounded-2xl ${data.boxShadow}`}
               >
-                <img
-                  className="rounded-lg"
-                  src={data.image}
-                  alt={data.name}
-                />
+                <img className="rounded-lg" src={data.image} alt={data.name} />
                 <h1
                   className={`font-black text-2xl text-outline-2 uppercase mt-4 ${data.textColor}`}
                 >

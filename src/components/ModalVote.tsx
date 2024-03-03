@@ -10,7 +10,7 @@ type propTypes = {
 const ModalVote: React.FC<propTypes> = ({ open, onClose, children }) => {
   return (
     <div
-      className={`fixed inset-0 flex justify-center items-center mt-16 transition-colors ${
+      className={`fixed inset-0 flex justify-center items-center mt-16 z-40 transition-colors ${
         open ? "visible bg-black/50" : "invisible"
       }`}
       onClick={onClose}
