@@ -1,8 +1,46 @@
-import React from "react";
+import React, { ChangeEvent, FormEvent } from "react";
 import Logo from "../assets/images/logo-image.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { IRegister } from "../Interfaces/Auth_Interface";
 
 export default function Register() {
+  const navigate = useNavigate();
+
+  const [formRegister, setFormRegister] = React.useState<IRegister>({
+    fullname: "",
+    address: "",
+    gender: "",
+    password: "",
+    username: "",
+  });
+
+  const handleOnChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setFormRegister({
+      ...formRegister,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleRegister = async (event: FormEvent<HTMLFormElement>) => {
+    try {
+      event.preventDefault();
+      const config = {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formRegister),
+      };
+
+      await fetch("http://localhost:5000/api/v1/register", config);
+
+      navigate("/login")
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div className="flex justify-center items-center">
       <div className="w-[80%]">
@@ -33,9 +71,10 @@ export default function Register() {
               Fullname
             </label>
             <input
+              onChange={handleOnChange}
               type="text"
-              name="username"
-              id="username"
+              name="fullname"
+              id="fullname"
               className="border border-slate-500 rounded w-full py-1 px-2"
             />
           </div>
@@ -47,9 +86,10 @@ export default function Register() {
               Alamat
             </label>
             <input
+              onChange={handleOnChange}
               type="text"
-              name="username"
-              id="username"
+              name="address"
+              id="address"
               className="border border-slate-500 rounded w-full py-1 px-2"
             />
           </div>
@@ -60,12 +100,16 @@ export default function Register() {
             >
               Jenis Kelamin
             </label>
-            <input
-              type="text"
-              name="username"
-              id="username"
+            <select
+              onChange={handleOnChange}
+              name="gender"
+              id="gender"
               className="border border-slate-500 rounded w-full py-1 px-2"
-            />
+            >
+              <option value=""></option>
+              <option value="Laki-laki">Laki-Laki</option>
+              <option value="Perempuan">Perempuan</option>
+            </select>
           </div>
           <div className="mb-2">
             <label
@@ -75,6 +119,7 @@ export default function Register() {
               Username
             </label>
             <input
+              onChange={handleOnChange}
               type="text"
               name="username"
               id="username"
@@ -89,6 +134,7 @@ export default function Register() {
               Password
             </label>
             <input
+              onChange={handleOnChange}
               type="password"
               name="password"
               id="password"
@@ -96,6 +142,7 @@ export default function Register() {
             />
           </div>
           <button
+            onClick={handleRegister}
             type="submit"
             className="w-full py-1 text-lg bg-ijo-lumut text-white rounded mt-5 hover:bg-[#4f4808] transition-all"
           >

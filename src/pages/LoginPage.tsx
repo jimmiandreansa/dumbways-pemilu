@@ -1,4 +1,4 @@
-import React from "react";
+// import React, { ChangeEvent } from "react";
 import Logo from "../assets/images/logo-image.png";
 import { Link } from "react-router-dom";
 
@@ -8,6 +8,20 @@ interface handleAuth {
 }
 
 export default function Login(props: handleAuth) {
+  // const [userLogin, setUserLogin] = React.useState(false);
+
+  // const loginAsUser = (e: React.MouseEvent<HTMLElement>): void => {
+  //   e.preventDefault();
+  //   setUserLogin(!userLogin);
+  // };
+
+  // const handleOnChange = (event: ChangeEvent<HTMLInputElement>): void => {
+  //   setFormRegister({
+  //     ...formRegister,
+  //     [event.target.value]: event.target.value,
+  //   });
+  // };
+
   return (
     <div className="flex justify-center items-center">
       <div className="w-[80%]">
@@ -38,6 +52,7 @@ export default function Login(props: handleAuth) {
               Username
             </label>
             <input
+              // onChange={handleOnChange}
               type="text"
               name="username"
               id="username"
@@ -47,12 +62,13 @@ export default function Login(props: handleAuth) {
           </div>
           <div className="mb-2">
             <label
-              htmlFor="status"
+              htmlFor="password"
               className="font-semibold mb-1 text-ijo-lumut"
             >
               Password
             </label>
             <input
+              // onChange={handleOnChange}
               type="password"
               name="password"
               id="password"
@@ -61,6 +77,7 @@ export default function Login(props: handleAuth) {
             />
           </div>
           <button
+            // onClick={loginAsUser}
             type="submit"
             className="w-full py-1 text-lg bg-ijo-lumut text-white rounded mt-5 hover:bg-[#4f4808] transition-all"
           >

@@ -33,17 +33,20 @@ const App: React.FC = () => {
 
   function login(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    if (form.username === "admin" && form.password === "administrator") {
+    if (form.username === "admin" && form.password === "admin") {
       setIsLoginAdmin(true);
     } else if (
-      form.username !== "" &&
-      form.password !== "" &&
-      form.username !== "admin" ||
+      (form.username !== "" &&
+        form.password !== "" &&
+        form.username !== "admin") ||
       form.password !== "administrator"
     ) {
       setIsLoginUser(true);
     }
   }
+
+  console.log("User", isLoginUser)
+  console.log("Admin", isLoginAdmin)
 
   React.useEffect(() => {
     navigate("/");
@@ -78,16 +81,88 @@ const App: React.FC = () => {
         />
         <Route path="/register" element={<RegisterPage />} />
         <Route element={<PrivateRouteAdmin />}>
-          <Route path="/admin" element={<><NavbarAdmin/><HomeAdmin /><Footer/></>} />
-          <Route element={<><NavbarAdmin/><AddPartaiPage /><Footer/></>} path="/add-partai" />
-          <Route element={<><NavbarAdmin/><AddPaslonPage /><Footer/></>} path="/add-paslon" />
+          <Route
+            path="/admin"
+            element={
+              <>
+                <NavbarAdmin />
+                <HomeAdmin />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            element={
+              <>
+                <NavbarAdmin />
+                <AddPartaiPage />
+                <Footer />
+              </>
+            }
+            path="/add-partai"
+          />
+          <Route
+            element={
+              <>
+                <NavbarAdmin />
+                <AddPaslonPage />
+                <Footer />
+              </>
+            }
+            path="/add-paslon"
+          />
         </Route>
         <Route element={<PrivateRouteUser />}>
-          <Route element={<><Navbar/><Home /><Footer/></>} path="/" />
-          <Route element={<><Navbar/><VotePage /><Footer/></>} path="/vote" />
-          <Route element={<><Navbar/><ListPartaiPage /><Footer/></>} path="/list-partai" />
-          <Route element={<><Navbar/><ListPaslonPage /><Footer/></>} path="/list-paslon" />
-          <Route element={<><Navbar/><DetailPage /><Footer/></>} path="/news-detail" />
+          <Route
+            element={
+              <>
+                <Navbar />
+                <Home />
+                <Footer />
+              </>
+            }
+            path="/"
+          />
+          <Route
+            element={
+              <>
+                <Navbar />
+                <VotePage />
+                <Footer />
+              </>
+            }
+            path="/vote"
+          />
+          <Route
+            element={
+              <>
+                <Navbar />
+                <ListPartaiPage />
+                <Footer />
+              </>
+            }
+            path="/list-partai"
+          />
+          <Route
+            element={
+              <>
+                <Navbar />
+                <ListPaslonPage />
+                <Footer />
+              </>
+            }
+            path="/list-paslon"
+          />
+          <Route
+            element={
+              <>
+                <Navbar />
+                <DetailPage />
+                <Footer />
+              </>
+            }
+            path="/news-detail"
+          />
         </Route>
       </Routes>
     </>
